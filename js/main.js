@@ -62,9 +62,9 @@ function toggleMusic() {
 
 // 3. Scroll to Quest Button Handler
 function scrollToQuest() {
-  const cakeComponent = document.querySelector("cake-stage");
+  const cakeComponent = document.querySelector("memory-stage");
   if (cakeComponent) {
-    const cakeSection = cakeComponent.querySelector("#cake-section");
+    const cakeSection = cakeComponent.querySelector("#memory-section");
     if (cakeSection) {
       cakeSection.classList.remove("hidden");
       cakeSection.scrollIntoView({ behavior: 'smooth' });

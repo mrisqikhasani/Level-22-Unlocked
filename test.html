@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Level 22: Cutest Girl Unlocked! ✨</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Quicksand', sans-serif; }
+    .font-cute { font-family: 'Fredoka', cursive; }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
+      50% { box-shadow: 0 0 0 10px rgba(236, 72, 153, 0); }
+    }
+    .animate-pulse-glow { animation: pulse-glow 2s infinite; }
+
+    @keyframes flip {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(180deg); }
+    }
+    
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-slide-in { animation: slideInUp 0.6s ease-out; }
+
+    @keyframes shimmer {
+      0% { background-position: -1000px 0; }
+      100% { background-position: 1000px 0; }
+    }
+    .animate-shimmer {
+      background: linear-gradient(90deg, #fff 25%, #f0f0f0 50%, #fff 75%);
+      background-size: 1000px 100%;
+      animation: shimmer 2s infinite;
+    }
+
+    .flip-card {
+      perspective: 1000px;
+      cursor: pointer;
+      height: 200px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+    }
+    .flip-card-front {
+      background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+      color: white;
+      border: 3px solid #fbca28;
+    }
+    .flip-card-back {
+      background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+      color: #be185d;
+      transform: rotateY(180deg);
+      border: 3px solid #f472b6;
+      font-size: 14px;
+      line-height: 1.6;
+      font-weight: 600;
+    }
+
+    .timeline-item {
+      display: flex;
+      margin-bottom: 30px;
+      position: relative;
+      opacity: 0;
+      animation: slideInUp 0.8s ease-out forwards;
+    }
+    .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+    .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px #fce7f3;
+    }
+    .timeline-content {
+      margin-left: 50px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 3px solid #f472b6;
+      flex: 1;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+    }
+    .timeline-date {
+      font-weight: 700;
+      color: #ec4899;
+      font-size: 13px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .timeline-photo {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .reason-item {
+      background: linear-gradient(135deg, #fce7f3 0%, #f5d0e8 100%);
+      border: 2px solid #f472b6;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .reason-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(236, 72, 153, 0.2);
+    }
+    .reason-number {
+      background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .reason-text {
+      color: #be185d;
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .gift-box {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #fbca28 0%, #fbc02d 100%);
+      border: 3px solid #f9a825;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 40px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    }
+    .gift-box:hover {
+      transform: scale(1.1) rotateY(10deg);
+      box-shadow: 0 8px 25px rgba(251, 191, 36, 0.5);
+    }
+    .gift-box.opened {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      opacity: 0.6;
+    }
+    .gift-text {
+      font-size: 11px;
+      font-weight: 600;
+      color: #78350f;
+      margin-top: 5px;
+    }
+
+    .countdown-block {
+      background: white;
+      border: 3px solid #f472b6;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      min-width: 80px;
+    }
+    .countdown-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ec4899;
+      font-family: 'Fredoka', cursive;
+    }
+    .countdown-label {
+      font-size: 12px;
+      color: #f472b6;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    .quiz-card {
+      background: white;
+      border: 3px solid #f472b6;
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
+    }
+    .quiz-question {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ec4899;
+      margin-bottom: 15px;
+    }
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .quiz-option {
+      padding: 12px;
+      border: 2px solid #f472b6;
+      background: white;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 600;
+      color: #be185d;
+    }
+    .quiz-option:hover {
+      background: #fce7f3;
+      transform: scale(1.05);
+    }
+    .quiz-option.correct {
+      background: #d1fae5;
+      border-color: #10b981;
+      color: #065f46;
+    }
+    .quiz-option.incorrect {
+      background: #fee2e2;
+      border-color: #ef4444;
+      color: #7f1d1d;
+    }
+    .quiz-result {
+      text-align: center;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 15px;
+      font-weight: 600;
+      display: none;
+    }
+
+    .envelope {
+      width: 100%;
+      max-width: 400px;
+      height: 200px;
+      background: white;
+      border: 4px solid #ec4899;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .envelope:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+    }
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+      border-bottom: 2px solid #ec4899;
+      transition: all 0.6s;
+      transform-origin: top;
+    }
+    .envelope.opened .envelope-flap {
+      transform: rotateX(-180deg);
+    }
+    .envelope-content {
+      font-size: 20px;
+      color: #ec4899;
+      font-weight: 700;
+      z-index: 10;
+    }
+
+    .letter-content {
+      display: none;
+      background: #fffbf0;
+      border: 3px solid #f472b6;
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #be185d;
+      text-align: center;
+    }
+    .letter-content.show {
+      display: block;
+      animation: slideInUp 0.8s ease-out;
+    }
+    .letter-signature {
+      margin-top: 20px;
+      font-weight: 700;
+      font-family: 'Fredoka', cursive;
+      font-size: 18px;
+    }
+
+    .carousel-container {
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 3px solid #f472b6;
+    }
+    .carousel-slide {
+      display: none;
+      width: 100%;
+    }
+    .carousel-slide.active {
+      display: block;
+      animation: slideInUp 0.5s ease-out;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px;
+      background: white;
+      border-top: 2px solid #f472b6;
+    }
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #f472b6;
+      cursor: pointer;
+      transition: all 0.3s;
+      opacity: 0.4;
+    }
+    .carousel-dot.active {
+      opacity: 1;
+      width: 30px;
+      border-radius: 6px;
+    }
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all 0.3s;
+    }
+    .carousel-nav:hover {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .carousel-prev { left: 10px; }
+    .carousel-next { right: 10px; }
+
+    .section {
+      display: none;
+      animation: slideInUp 0.8s ease-out;
+    }
+    .section.active {
+      display: block;
+    }
+    .section-nav {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .section-btn {
+      padding: 8px 16px;
+      border: 2px solid #f472b6;
+      background: white;
+      color: #ec4899;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+      font-size: 12px;
+    }
+    .section-btn:hover {
+      background: #fce7f3;
+      transform: scale(1.05);
+    }
+    .section-btn.active {
+      background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+      color: white;
+    }
+
+    .typewriter {
+      display: inline-block;
+      border-right: 3px solid #ec4899;
+      padding-right: 5px;
+      animation: typewriter-blink 0.7s infinite;
+    }
+    @keyframes typewriter-blink {
+      0%, 49% { border-right: 3px solid #ec4899; }
+      50%, 100% { border-right: 3px solid transparent; }
+    }
+
+    .music-player {
+      background: white;
+      border: 3px solid #f472b6;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .album-art {
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      border: 3px solid #f472b6;
+    }
+    .song-title {
+      font-weight: 700;
+      color: #ec4899;
+      margin-bottom: 10px;
+    }
+    audio {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #ec4899;
+      pointer-events: none;
+      animation: confetti-fall 3s ease-out forwards;
+    }
+    @keyframes confetti-fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: #f3f4f6;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ec4899 0%, #f472b6 100%);
+      border-radius: 10px;
+      transition: width 0.3s;
+    }
+
+    @media (max-width: 640px) {
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+      .gift-box {
+        width: 100px;
+        height: 100px;
+        font-size: 35px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-pink-100/60 text-slate-700 min-h-screen selection:bg-pink-300">
+
+  <!-- ==================== PASSWORD GATE ==================== -->
+  <div id="password-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-pink-950/90 backdrop-blur-md p-4">
+    <div class="max-w-md w-full bg-white border-4 border-pink-300 rounded-3xl p-6 text-center shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-3 -right-3 text-3xl animate-bounce">🔑</div>
+      <div class="inline-block bg-pink-100 text-pink-500 font-cute text-xs px-3 py-1.5 rounded-full mb-3 font-bold border border-pink-200">
+        SECURITY CHECKPOINT 🔐
+      </div>
+      <h2 class="font-cute text-2xl font-bold text-pink-600 mb-1">Masukkan Passcode Ultah ✨</h2>
+      <p class="text-slate-500 text-xs mb-6">Ketik 6 digit tanggal lahir kamu (DDMMYY)</p>
+      
+      <form id="passcode-form" onsubmit="handlePasscodeSubmit(event)">
+        <input 
+          type="password" 
+          id="passcode-input" 
+          maxlength="6" 
+          placeholder="******" 
+          class="w-full text-center tracking-[0.5em] font-cute text-2xl py-3 bg-pink-50 border-2 border-pink-200 rounded-2xl focus:border-pink-400 focus:outline-none mb-4 text-pink-500 transition"
+          required
+        />
+        <button 
+          type="submit" 
+          class="w-full font-cute bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-bold py-3.5 rounded-2xl shadow-md shadow-pink-200 transition duration-200 active:scale-95 text-base border-2 border-white"
+        >
+          UNLOCK SURPRISE 🔓✨
+        </button>
+      </form>
+
+      <div id="clue-toast" class="hidden mt-4 p-3 bg-rose-50 border-2 border-rose-200 rounded-2xl text-rose-500 text-xs font-semibold leading-relaxed animate-bounce"></div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN DASHBOARD ==================== -->
+  <div id="main-dashboard" class="hidden min-h-screen flex flex-col justify-between">
+    
+    <!-- TOP BAR -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b-2 border-pink-200 px-4 py-3 shadow-sm">
+      <div class="max-w-xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-pink-200 border-2 border-pink-400 flex items-center justify-center text-xl shadow-inner animate-bounce">👑</div>
+          <div>
+            <div class="font-cute font-bold text-sm text-pink-600 flex items-center gap-1">
+              <span>Sayang ❤️</span>
+              <span class="text-xs">✨</span>
+            </div>
+            <div class="flex items-center gap-2 text-[10px] text-pink-400 font-bold mt-0.5">
+              <span>BOBA:</span>
+              <div class="w-16 bg-pink-100 h-2.5 rounded-full overflow-hidden border border-pink-300">
+                <div class="bg-pink-400 h-full w-full rounded-full"></div>
+              </div>
+              <span>100% 🧋</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span class="font-cute text-xs bg-gradient-to-r from-pink-400 to-rose-400 text-white px-3 py-1 rounded-full font-bold shadow-sm">
+            LVL 22 🎈
+          </span>
+          <button 
+            onclick="toggleMusic()" 
+            id="music-btn" 
+            class="w-9 h-9 bg-pink-50 border-2 border-pink-200 rounded-xl flex items-center justify-center hover:bg-pink-100 transition shadow-sm text-sm"
+          >
+            🎵
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-xl mx-auto px-4 py-6 flex-1 w-full">
+      
+      <!-- SECTION 0: INTRO -->
+      <div id="section-0" class="section active">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl shadow-pink-200/50 relative overflow-hidden text-center mb-6">
+          <div class="absolute top-2 left-2 text-2xl animate-float">🌸</div>
+          <div class="absolute bottom-2 right-2 text-2xl animate-float" style="animation-delay: 1.5s;">🧸</div>
+
+          <div class="relative inline-block my-2">
+            <div class="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-3xl bg-pink-100 border-4 border-pink-300 p-1.5 shadow-md rotate-[-2deg] transition transform hover:rotate-0 duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" 
+                alt="Birthday Girl" 
+                class="w-full h-full object-cover rounded-2xl"
+              />
+            </div>
+            <span class="absolute -bottom-2 -right-2 bg-yellow-300 text-yellow-900 border-2 border-yellow-400 font-cute text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+              MAIN CHARACTER 🌟
+            </span>
+          </div>
+
+          <div class="mt-4 space-y-2">
+            <h1 class="font-cute text-2xl sm:text-3xl text-pink-500 font-bold tracking-wide">
+              Happy Birthday, Putri! 🎉
+            </h1>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-xs mx-auto">
+              Selamat memasuki level baru dalam hidupmu! Web quest spesial ini dibuat khusus buat ngerayain hari istimewamu. Klik "Mulai Petualangan" untuk melihat kejutan-kejutan yang sudah aku siapkan! 🥳✨
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2.5 mt-5 text-left text-xs font-semibold">
+            <div class="bg-pink-50 border-2 border-pink-100 p-2.5 rounded-2xl">
+              <span class="text-pink-400 block text-[10px]">Tingkat Lucu</span>
+              <span class="text-pink-600 font-cute text-sm">999,999+ 💖</span>
+            </div>
+            <div class="bg-purple-50 border-2 border-purple-100 p-2.5 rounded-2xl">
+              <span class="text-purple-400 block text-[10px]">Skill Spesial</span>
+              <span class="text-purple-600 font-cute text-sm">Bikin Kangen 🥺</span>
+            </div>
+            <div class="bg-yellow-50 border-2 border-yellow-100 p-2.5 rounded-2xl">
+              <span class="text-yellow-600 block text-[10px]">Hobi Utama</span>
+              <span class="text-yellow-700 font-cute text-sm">Jadi Cantik 🤪</span>
+            </div>
+            <div class="bg-emerald-50 border-2 border-emerald-100 p-2.5 rounded-2xl">
+              <span class="text-emerald-600 block text-[10px]">Kado Status</span>
+              <span class="text-emerald-700 font-cute text-sm">Ready 🎁</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button 
+            onclick="showSection(1)" 
+            class="w-full sm:w-auto font-cute text-lg bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 hover:scale-105 active:scale-95 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-pink-300 transition duration-200 flex items-center justify-center gap-2 mx-auto border-2 border-white"
+          >
+            <span>MULAI PETUALANGAN</span>
+            <span class="text-xl">👉✨</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- SECTION 1: LOVE LETTERS (FLIP CARDS) -->
+      <div id="section-1" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-2">💌 Love Letters</h2>
+          <p class="text-center text-sm text-slate-500 mb-6">Hover untuk membaca pesan spesial ❤️</p>
+
+          <div class="grid grid-cols-1 gap-6">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div>
+                    <div style="font-size: 40px; margin-bottom: 10px;">💕</div>
+                    <p>Pesan Spesial #1</p>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  Kamu adalah alasan terbaik aku tersenyum setiap hari. Terima kasih telah ada di hidupku 💕
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div>
+                    <div style="font-size: 40px; margin-bottom: 10px;">😍</div>
+                    <p>Pesan Spesial #2</p>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  Cara kamu cengir itu paling lucu dan paling manis di dunia. Aku bisa lihat itu setiap hari 🥺
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div>
+                    <div style="font-size: 40px; margin-bottom: 10px;">🌟</div>
+                    <p>Pesan Spesial #3</p>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  Bersama kamu terasa seperti hidup di cerita dongeng. Kamu adalah bintang dalam hidupku ✨
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div>
+                    <div style="font-size: 40px; margin-bottom: 10px;">🎂</div>
+                    <p>Pesan Spesial #4</p>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  Selamat ultah untuk orang yang paling istimewa. Aku ingin merayakan setiap hari denganmu 🎉
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: MEMORY TIMELINE -->
+      <div id="section-2" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-6">📸 Our Beautiful Moments</h2>
+
+          <div style="position: relative; padding-left: 20px;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #ec4899 0%, #f472b6 100%);"></div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">15 Januari 2024</span>
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=300&q=80" class="timeline-photo">
+                <p style="margin: 0; color: #be185d; font-size: 14px;">Hari pertama yang tak terlupakan 💫</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">28 Februari 2024</span>
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=300&q=80" class="timeline-photo">
+                <p style="margin: 0; color: #be185d; font-size: 14px;">Petualangan seru bersama 🌍</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">14 Mei 2024</span>
+                <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=300&q=80" class="timeline-photo">
+                <p style="margin: 0; color: #be185d; font-size: 14px;">Sunset cantik bersama orang terkasih 🌅</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">22 Juli 2024</span>
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80" class="timeline-photo">
+                <p style="margin: 0; color: #be185d; font-size: 14px;">Momen yang akan selamanya aku ingat 💖</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">Hari Ini</span>
+                <div style="font-size: 40px; text-align: center; padding: 30px 0;">🎉</div>
+                <p style="margin: 0; color: #be185d; font-size: 14px; text-align: center;"><strong>Hari spesialmu, hari terindah untukku</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: 22 REASONS WHY -->
+      <div id="section-3" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-6">🌟 22 Alasan Mengapa Aku Sayang Kamu</h2>
+          <p class="text-center text-sm text-slate-500 mb-6">(Ini baru permulaan dari ribuan hal 💕)</p>
+
+          <div>
+            <div class="reason-item">
+              <div class="reason-number">1</div>
+              <div class="reason-text">Caramu cengir itu paling manis dan membuatku selalu tersenyum</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">2</div>
+              <div class="reason-text">Kamu sangat perhatian dan selalu memikirkan perasaan orang lain</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">3</div>
+              <div class="reason-text">Humor kamu membuat aku tertawa sampai perut sakit</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">4</div>
+              <div class="reason-text">Kamu cantik, baik dalam dan luar, amazing sih 😍</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">5</div>
+              <div class="reason-text">Cara kamu mendengarkan aku membuat aku merasa didengar</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">6</div>
+              <div class="reason-text">Kamu punya mimpi besar dan itu menginspirasi aku</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">7</div>
+              <div class="reason-text">Kebaikan hatimu tidak terbatas, selalu siap membantu</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">8</div>
+              <div class="reason-text">Kamu yang menjadi alasan aku bangun dengan semangat</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">9</div>
+              <div class="reason-text">Cara kamu memperlakukan orang-orang tua membuat aku bangga</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">10</div>
+              <div class="reason-text">Aku bisa jadi diri sendiri 100% saat bersama kamu</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">11</div>
+              <div class="reason-text">Kamu selalu ada di saat aku paling membutuhkan</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">12</div>
+              <div class="reason-text">Matamu berbicara lebih banyak daripada kata-kata</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">13</div>
+              <div class="reason-text">Kamu membuat hidup menjadi lebih berwarna dan bermakna</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">14</div>
+              <div class="reason-text">Cara kamu peduli ke detail adalah sesuatu yang spesial</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">15</div>
+              <div class="reason-text">Kamu adalah orang yang paling bisa aku percayai</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">16</div>
+              <div class="reason-text">Pelukan kamu terasa seperti rumah untukku</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">17</div>
+              <div class="reason-text">Kamu punya cara unik untuk membuat segalanya menjadi spesial</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">18</div>
+              <div class="reason-text">Dengan kamu, aku belajar arti cinta yang sejati</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">19</div>
+              <div class="reason-text">Kamu adalah mimpi yang akhirnya jadi kenyataan untukku</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">20</div>
+              <div class="reason-text">Masa depan terasa lebih cerah karena kamu ada di dalamnya</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">21</div>
+              <div class="reason-text">Kamu adalah yang terbaik yang pernah terjadi padaku</div>
+            </div>
+
+            <div class="reason-item">
+              <div class="reason-number">22</div>
+              <div class="reason-text">Setiap hari bersama kamu adalah alasan untuk bersyukur ❤️</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: PHOTO CAROUSEL -->
+      <div id="section-4" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-6">🖼️ Photo Gallery</h2>
+
+          <div class="carousel-container">
+            <div class="carousel-slide active">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Photo 1">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=500&q=80" alt="Photo 2">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" alt="Photo 3">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=500&q=80" alt="Photo 4">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=80" alt="Photo 5">
+            </div>
+
+            <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-nav carousel-next" onclick="changeSlide(1)">❯</button>
+
+            <div class="carousel-dots">
+              <div class="carousel-dot active" onclick="currentSlide(0)"></div>
+              <div class="carousel-dot" onclick="currentSlide(1)"></div>
+              <div class="carousel-dot" onclick="currentSlide(2)"></div>
+              <div class="carousel-dot" onclick="currentSlide(3)"></div>
+              <div class="carousel-dot" onclick="currentSlide(4)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: PLAYLIST -->
+      <div id="section-5" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-6">🎵 Our Playlist</h2>
+          <p class="text-center text-sm text-slate-500 mb-6">Lagu-lagu yang mengingatkan aku padamu ❤️</p>
+
+          <div class="music-player">
+            <div style="font-size: 50px; margin-bottom: 10px;">🎶</div>
+            <p class="song-title">Our Love Story</p>
+            <p style="color: #f472b6; font-size: 13px; margin-bottom: 15px;">Setiap lagu ini cerita tentang kita</p>
+            <audio controls style="border-radius: 10px; box-shadow: 0 2px 10px rgba(236, 72, 153, 0.2);">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 20px;">
+            <div style="background: #fce7f3; border: 2px solid #f472b6; padding: 12px; border-radius: 12px;">
+              <p style="margin: 0; color: #ec4899; font-weight: 600; font-size: 13px;">1. Lagu Favorit Pertama Kita 🎵</p>
+            </div>
+            <div style="background: #fce7f3; border: 2px solid #f472b6; padding: 12px; border-radius: 12px;">
+              <p style="margin: 0; color: #ec4899; font-weight: 600; font-size: 13px;">2. Lagu yang Kamu Nyanyikan 🎤</p>
+            </div>
+            <div style="background: #fce7f3; border: 2px solid #f472b6; padding: 12px; border-radius: 12px;">
+              <p style="margin: 0; color: #ec4899; font-weight: 600; font-size: 13px;">3. Lagu Perjalanan Kita Bersama 🚗</p>
+            </div>
+            <div style="background: #fce7f3; border: 2px solid #f472b6; padding: 12px; border-radius: 12px;">
+              <p style="margin: 0; color: #ec4899; font-weight: 600; font-size: 13px;">4. Lagu untuk Hari-Hari Indah 🌅</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 6: QUIZ -->
+      <div id="section-6" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-2">🎮 Kuis: Seberapa Baik Aku Mengenal Kamu?</h2>
+          <p class="text-center text-sm text-slate-500 mb-6">Klik jawaban yang benar! 💕</p>
+
+          <div class="progress-bar">
+            <div class="progress-fill" id="quiz-progress" style="width: 0%"></div>
+          </div>
+
+          <div id="quiz-1" class="quiz-card">
+            <div class="quiz-question">Warna favorit kamu?</div>
+            <div class="quiz-options">
+              <button class="quiz-option" onclick="checkAnswer(this, true)">Pink 💕</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Kuning</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Biru</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Hijau</button>
+            </div>
+            <div class="quiz-result"></div>
+          </div>
+
+          <div id="quiz-2" class="quiz-card" style="display: none;">
+            <div class="quiz-question">Makanan favorit kamu?</div>
+            <div class="quiz-options">
+              <button class="quiz-option" onclick="checkAnswer(this, true)">Kopi & Kue 😋</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Nasi Goreng</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Sushi</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Pizza</button>
+            </div>
+            <div class="quiz-result"></div>
+          </div>
+
+          <div id="quiz-3" class="quiz-card" style="display: none;">
+            <div class="quiz-question">Hal yang paling membuatmu bahagia?</div>
+            <div class="quiz-options">
+              <button class="quiz-option" onclick="checkAnswer(this, true)">Waktu Bersama Orang Terkasih ❤️</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Uang Banyak</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Traveling</button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">Shopping</button>
+            </div>
+            <div class="quiz-result"></div>
+          </div>
+
+          <div id="quiz-complete" style="display: none; text-align: center; padding: 30px; background: linear-gradient(135deg, #fce7f3 0%, #f5d0e8 100%); border-radius: 20px; border: 3px solid #f472b6;">
+            <div style="font-size: 50px; margin-bottom: 15px;">🎉</div>
+            <p style="font-size: 20px; font-weight: 700; color: #ec4899; margin-bottom: 10px;">Sempurna! 100% ✨</p>
+            <p style="color: #be185d; font-size: 14px;">Aku tahu kamu dengan sangat baik karena aku sangat sayang sama kamu 💕</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 7: GIFT BOXES -->
+      <div id="section-7" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-6">🎁 Mystery Gifts</h2>
+          <p class="text-center text-sm text-slate-500 mb-6">Buka hadiah-hadiah spesial untuk kamu!</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; justify-items: center;">
+            <div class="gift-box" onclick="openGift(this, 'Surprise #1: Kenangan Terindah 💫')">
+              <span>🎁</span>
+              <div class="gift-text">Tap!</div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'Surprise #2: Masa Depan Bersama 🌟')">
+              <span>🎀</span>
+              <div class="gift-text">Tap!</div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'Surprise #3: Janji Untukmu ❤️')">
+              <span>🎊</span>
+              <div class="gift-text">Tap!</div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'Surprise #4: Love You Forever 💕')">
+              <span>💝</span>
+              <div class="gift-text">Tap!</div>
+            </div>
+          </div>
+
+          <div id="gift-message" style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #fce7f3 0%, #f5d0e8 100%); border-radius: 15px; border: 2px solid #f472b6; text-align: center; color: #be185d; font-weight: 600; display: none;"></div>
+        </div>
+      </div>
+
+      <!-- SECTION 8: COUNTDOWN -->
+      <div id="section-8" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-2">⏰ Countdown to Next Celebration</h2>
+          <p class="text-center text-sm text-slate-500 mb-6">Berapa lama lagi sampai kita ketemu 💕</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); gap: 15px; text-align: center; margin-bottom: 20px;">
+            <div class="countdown-block">
+              <div class="countdown-number" id="countdown-days">365</div>
+              <div class="countdown-label">Hari</div>
+            </div>
+            <div class="countdown-block">
+              <div class="countdown-number" id="countdown-hours">12</div>
+              <div class="countdown-label">Jam</div>
+            </div>
+            <div class="countdown-block">
+              <div class="countdown-number" id="countdown-minutes">30</div>
+              <div class="countdown-label">Menit</div>
+            </div>
+            <div class="countdown-block">
+              <div class="countdown-number" id="countdown-seconds">45</div>
+              <div class="countdown-label">Detik</div>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(135deg, #fce7f3 0%, #f5d0e8 100%); border: 2px solid #f472b6; border-radius: 15px; padding: 20px; text-align: center; color: #be185d; font-weight: 600;">
+            Setiap detik dengan kamu adalah berkah yang tak ternilai 💕
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 9: LOVE LETTER ENVELOPE -->
+      <div id="section-9" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <h2 class="font-cute text-2xl font-bold text-pink-500 text-center mb-6">💌 A Love Letter Just For You</h2>
+
+          <div class="envelope" id="love-envelope" onclick="openLetter()">
+            <div class="envelope-flap"></div>
+            <div class="envelope-content">
+              💌
+              <p style="font-size: 14px; margin-top: 10px;">Click to Open</p>
+            </div>
+          </div>
+
+          <div class="letter-content" id="letter-content">
+            <div style="font-size: 30px; margin-bottom: 20px;">💕</div>
+            <p style="font-size: 14px; line-height: 1.8;">
+              Sayang,
+            </p>
+            <p style="font-size: 14px; line-height: 1.8;">
+              Jika aku diminta menuliskan semua alasan mengapa aku sayang kamu, surat ini tidak akan pernah selesai. Kamu adalah rahasia kebahagiaan aku, alasan aku setiap pagi terbangun dengan senyuman, dan impian yang akhirnya menjadi kenyataan.
+            </p>
+            <p style="font-size: 14px; line-height: 1.8;">
+              Terima kasih telah menjadi bagian dari hidupku. Terima kasih telah mempercayai aku, mendengarkan aku, dan membuat setiap momen menjadi istimewa. Bersama kamu, hidup terasa lebih bermakna dan berwarna.
+            </p>
+            <p style="font-size: 14px; line-height: 1.8;">
+              Aku berjanji akan selalu ada untukmu, di saat senang maupun susah. Kamu adalah orang yang paling berharga bagiku, dan aku akan terus berusaha membuat kamu tersenyum setiap hari.
+            </p>
+            <p style="font-size: 14px; line-height: 1.8;">
+              Selamat ulang tahun, Putri. Hari ini adalah hari spesialmu, tapi kamu membuat setiap hari menjadi spesial bagiku. 💕
+            </p>
+            <div class="letter-signature">
+              Selamanya milikmu,<br>
+              <span style="font-size: 20px;">❤️</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 10: THANK YOU LETTER -->
+      <div id="section-10" class="section">
+        <div class="bg-white border-4 border-pink-200 rounded-3xl p-6 shadow-xl mb-6">
+          <div style="text-align: center;">
+            <div style="font-size: 50px; margin-bottom: 20px;">✨</div>
+            <h2 class="font-cute text-2xl font-bold text-pink-500 mb-4">Terima Kasih Telah Merayakan Hari Ini Denganku</h2>
+            <p style="color: #be185d; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
+              Setiap momen bersama kamu adalah hadiah terbesar. Hidup ini lebih bermakna karena ada kamu. Aku tidak bisa menunggu untuk menciptakan lebih banyak kenangan indah bersama.
+            </p>
+            
+            <div style="background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); color: white; padding: 30px 20px; border-radius: 20px; margin-bottom: 20px;">
+              <p style="font-size: 18px; font-weight: 700; margin: 0; font-family: 'Fredoka', cursive;">
+                I Love You More Every Day 💕
+              </p>
+            </div>
+
+            <div style="background: #fffbf0; border: 2px solid #f472b6; border-radius: 15px; padding: 20px; color: #be185d;">
+              <p style="font-size: 13px; margin: 0; line-height: 1.8;">
+                "Dalam hidup ini, banyak hal yang bisa berubah, tapi satu hal yang pasti tetap adalah cinta aku untukmu. 
+                <br><br>
+                Selamat ulang tahun untuk orang yang membuat hidupku lebih berwarna. Aku mencintaimu lebih dari apapun. 💕"
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-6 pb-10">
+          <button 
+            onclick="showSection(0)" 
+            class="font-cute text-base bg-gradient-to-r from-pink-400 to-rose-400 hover:scale-105 active:scale-95 text-white font-bold px-8 py-3 rounded-2xl shadow-lg shadow-pink-300 transition duration-200 border-2 border-white"
+          >
+            🏠 Kembali ke Awal
+          </button>
+        </div>
+      </div>
+
+      <!-- SECTION NAVIGATION -->
+      <div class="section-nav">
+        <button class="section-btn active" id="btn-0" onclick="showSection(0)">🏠 Awal</button>
+        <button class="section-btn" id="btn-1" onclick="showSection(1)">💌 Surat</button>
+        <button class="section-btn" id="btn-2" onclick="showSection(2)">📸 Momen</button>
+        <button class="section-btn" id="btn-3" onclick="showSection(3)">🌟 Alasan</button>
+        <button class="section-btn" id="btn-4" onclick="showSection(4)">🖼️ Galeri</button>
+        <button class="section-btn" id="btn-5" onclick="showSection(5)">🎵 Musik</button>
+        <button class="section-btn" id="btn-6" onclick="showSection(6)">🎮 Kuis</button>
+        <button class="section-btn" id="btn-7" onclick="showSection(7)">🎁 Hadiah</button>
+        <button class="section-btn" id="btn-8" onclick="showSection(8)">⏰ Hitung</button>
+        <button class="section-btn" id="btn-9" onclick="showSection(9)">💌 Surat Cinta</button>
+        <button class="section-btn" id="btn-10" onclick="showSection(10)">✨ Akhir</button>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-3 text-center text-[11px] text-pink-400 font-semibold">
+      Made with ❤️ for the most special person in my life.
+    </footer>
+  </div>
+
+  <!-- AUDIO -->
+  <audio id="bg-music" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const CORRECT_PASSCODE = "270804";
+    let attemptCount = 0;
+    let currentSlide = 0;
+    let quizCurrent = 1;
+    let quizScore = 0;
+    let bgMusic = document.getElementById("bg-music");
+    let isPlaying = false;
+
+    // PASSWORD VERIFICATION
+    function handlePasscodeSubmit(event) {
+      event.preventDefault();
+      const inputVal = document.getElementById("passcode-input").value;
+      const clueToast = document.getElementById("clue-toast");
+
+      if (inputVal === CORRECT_PASSCODE) {
+        document.getElementById("password-screen").classList.add("hidden");
+        document.getElementById("main-dashboard").classList.remove("hidden");
+        playMusic();
+        createConfetti();
+      } else {
+        attemptCount++;
+        clueToast.classList.remove("hidden");
+        
+        if (attemptCount === 1) {
+          clueToast.innerText = "❌ Ups, salah! Coba ingat-ingat lagi 😄";
+        } else if (attemptCount === 2) {
+          clueToast.innerText = "😜 Masih salah! Format: DDMMYY (27 Agustus 2004)";
+        } else {
+          clueToast.innerText = "🚨 Udah 3x salah! Jawabannya: 270804";
+        }
+      }
+    }
+
+    // MUSIC CONTROL
+    function playMusic() {
+      bgMusic.play().then(() => {
+        isPlaying = true;
+        document.getElementById("music-btn").innerText = "🔊";
+      }).catch(err => console.log("Autoplay blocked"));
+    }
+
+    function toggleMusic() {
+      const musicBtn = document.getElementById("music-btn");
+      if (isPlaying) {
+        bgMusic.pause();
+        musicBtn.innerText = "🎵";
+        isPlaying = false;
+      } else {
+        bgMusic.play();
+        musicBtn.innerText = "🔊";
+        isPlaying = true;
+      }
+    }
+
+    // SECTION NAVIGATION
+    function showSection(sectionNum) {
+      document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+      document.querySelectorAll(".section-btn").forEach(b => b.classList.remove("active"));
+      
+      document.getElementById(`section-${sectionNum}`).classList.add("active");
+      document.getElementById(`btn-${sectionNum}`).classList.add("active");
+      
+      window.scrollTo({top: 0, behavior: "smooth"});
+    }
+
+    // CAROUSEL
+    function changeSlide(n) {
+      let slides = document.querySelectorAll(".carousel-slide");
+      currentSlide += n;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      updateCarousel();
+    }
+
+    function currentSlide(n) {
+      currentSlide = n;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      document.querySelectorAll(".carousel-slide").forEach((s, i) => {
+        s.classList.toggle("active", i === currentSlide);
+      });
+      document.querySelectorAll(".carousel-dot").forEach((d, i) => {
+        d.classList.toggle("active", i === currentSlide);
+      });
+    }
+
+    // QUIZ
+    function checkAnswer(button, isCorrect) {
+      const card = button.closest(".quiz-card");
+      const resultDiv = card.querySelector(".quiz-result");
+      const options = card.querySelectorAll(".quiz-option");
+      
+      options.forEach(opt => opt.disabled = true);
+
+      if (isCorrect) {
+        button.classList.add("correct");
+        resultDiv.classList.add("show");
+        resultDiv.style.background = "#d1fae5";
+        resultDiv.style.color = "#065f46";
+        resultDiv.innerText = "✅ Benar! Kamu amazing! 🌟";
+        quizScore++;
+      } else {
+        button.classList.add("incorrect");
+        resultDiv.classList.add("show");
+        resultDiv.style.background = "#fee2e2";
+        resultDiv.style.color = "#7f1d1d";
+        resultDiv.innerText = "❌ Hampir! Coba lagi besok 😊";
+      }
+
+      updateQuizProgress();
+      setTimeout(() => nextQuizQuestion(), 2000);
+    }
+
+    function nextQuizQuestion() {
+      if (quizCurrent < 3) {
+        document.getElementById(`quiz-${quizCurrent}`).style.display = "none";
+        quizCurrent++;
+        document.getElementById(`quiz-${quizCurrent}`).style.display = "block";
+      } else {
+        document.getElementById(`quiz-${quizCurrent}`).style.display = "none";
+        document.getElementById("quiz-complete").style.display = "block";
+      }
+    }
+
+    function updateQuizProgress() {
+      const progress = (quizScore / 3) * 100;
+      document.getElementById("quiz-progress").style.width = progress + "%";
+    }
+
+    // GIFT BOXES
+    function openGift(element, message) {
+      if (element.classList.contains("opened")) return;
+      
+      element.classList.add("opened");
+      const messageDiv = document.getElementById("gift-message");
+      messageDiv.innerText = message;
+      messageDiv.style.display = "block";
+      createConfetti();
+    }
+
+    // LOVE LETTER
+    function openLetter() {
+      const envelope = document.getElementById("love-envelope");
+      const letterContent = document.getElementById("letter-content");
+      
+      if (!envelope.classList.contains("opened")) {
+        envelope.classList.add("opened");
+        setTimeout(() => {
+          letterContent.classList.add("show");
+        }, 600);
+        createConfetti();
+      }
+    }
+
+    // COUNTDOWN
+    function updateCountdown() {
+      const targetDate = new Date();
+      targetDate.setFullYear(targetDate.getFullYear() + 1);
+
+      const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate.getTime() - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown-days").innerText = days;
+        document.getElementById("countdown-hours").innerText = hours;
+        document.getElementById("countdown-minutes").innerText = minutes;
+        document.getElementById("countdown-seconds").innerText = seconds;
+      }, 1000);
+    }
+
+    // CONFETTI
+    function createConfetti() {
+      for (let i = 0; i < 30; i++) {
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * window.innerWidth + "px";
+        confetti.style.top = "-10px";
+        confetti.style.backgroundColor = ["#ec4899", "#f472b6", "#fbca28", "#10b981"][Math.floor(Math.random() * 4)];
+        document.body.appendChild(confetti);
+
+        setTimeout(() => confetti.remove(), 3000);
+      }
+    }
+
+    // INIT
+    updateCountdown();
+  </script>
+</body>
+</html>

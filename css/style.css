@@ -1,0 +1,20 @@
+body { 
+  font-family: 'Quicksand', sans-serif; 
+}
+
+.font-cute { 
+  font-family: 'Fredoka', cursive; 
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-8px) rotate(2deg); 
+  }
+}
+
+.animate-float { 
+  animation: float 3s ease-in-out infinite; 
+}

@@ -21,7 +21,7 @@ class QuizStage extends HTMLElement {
             {
                 question: "Apa refleks pertama kamu ketika nggak sengaja ngeliat barang lucu/gemoy di mall atau online shop? 🛍️",
                 options: [
-                    "'Aku tidak membutuhkannya, harus hemat.' 🛑",
+                    "'Aku tidak membutuhkannya' 🛑",
                     "'Cuma lihat-lihat aja kok, nggak bakal beli.' 🙈",
                     "'LUCU BANGET HARUS PUNYA SEKARANG! 😭🛍️'",
                     "'Nanti deh mikir-mikir dulu seminggu.'"
@@ -45,15 +45,15 @@ class QuizStage extends HTMLElement {
             },
 
             {
-                question: "Dari perjalanan kamu yang awal hanya mahasiswa biasa, lulusan terbaik di Asah sampe Jadi Skom, predikat apa yang paling cocok buat kamu? 🌟",
+                question: "Dari perjalanan kamu di Bangkit, lulusan terbaik Asah, resmi S.Kom, sampai makin pro di dunia DevOps & AWS Cloud, predikat apa yang paling cocok buat kamu? 🌟",
                 options: [
                     "Cewek Pekerja Keras & Pantang Menyerah 💪",
-                    "IT Girl yang Keren & Talented 💻",
-                    "Sosok yang Luar Biasa & Bikin Bangga ❤️",
+                    "Future Certified AWS Cloud Engineer ☁️💻",
+                    "Sosok Hebat yang Bikin Bangga ❤️",
                     "SEMUA BENAR TANPA KECUALI! 👑✨"
                 ],
                 answer: 3,
-                correctMessage: "100% CORRECT! Kamu borong semua sifat keren itu tanpa sisa! 👑❤️",
+                correctMessage: "100% CORRECT! Kamu borong semua predikat keren itu tanpa sisa! 👑☁️❤️",
                 wrongMessage: "Kamu itu borongan semuanya! Pilih yang 'SEMUA BENAR' dong! 🥺✨"
             },
 
@@ -61,12 +61,12 @@ class QuizStage extends HTMLElement {
                 question: "Apa wishlist wajib yang paling kamu harapkan di usiamu yang ke-22 ini? ✨",
                 options: [
                     "Makin banyak kebahagiaan & senyuman ❤️",
-                    "Kesehatan, kelancaran karir & rezeki 🌸",
-                    "Stok dimsum enak & barang gemoy melimpah 🥟🛍️",
+                    "Karier DevOps & AWS Cloud makin sukses ☁️🚀",
+                    "Rezeki melimpah, stok dimsum enak & barang gemoy aman 🥟🛍️💸",
                     "SEMUA DOA BAIK DI ATAS! 🎉"
                 ],
                 answer: 3,
-                correctMessage: "Aamiin! Semoga semua doa baik ini dikabulkan satu per satu ya sayang! ❤️✨",
+                correctMessage: "Aamiin! Semoga rezeki makin melimpah, karier DevOps AWS makin meroket, dan semua doa baik kamu dikabulkan satu per satu ya sayang! ❤️☁️✨",
                 wrongMessage: "Jangan pilih satu-satu, aminkan SEMUA doa baiknya dong! 😭❤️"
             }
         ];
@@ -84,7 +84,7 @@ class QuizStage extends HTMLElement {
 
         <!-- Stage Badge -->
         <div class="inline-block bg-purple-100 text-purple-500 font-cute text-xs sm:text-sm px-4 py-1.5 rounded-full font-bold border border-purple-200 shadow-sm">
-          QUEST 2: ALIA'S PERSONALITY CHECK 🧠
+          STAGE 2: PERSONALITY CHECK 🧠
         </div>
 
         <!-- Heading -->

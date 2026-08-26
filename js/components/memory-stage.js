@@ -1,34 +1,40 @@
 class MemoryStage extends HTMLElement {
-
   connectedCallback() {
     this.memories = [
       {
         year: "2023",
-        title: "The Beginning 🌸",
+        title: "The Beginning & Bangkit Era 🌸",
         image: "assets/img/Memory-1.jpg",
         description:
-          "Salah satu bagian dari perjalanan yang mungkin kelihatannya sederhana, tapi ternyata jadi bagian dari cerita yang berharga."
+          "Awal dari segalanya! Momen ketika kamu nanya-nanya soal program Bangkit. Dari yang awalnya masih belajar awal di IT, ternyata jadi langkah pertama dari perjalanan hebat kamu."
       },
       {
         year: "2024",
-        title: "The S.Kom Era 🎓",
+        title: "Lulusan Terbaik Program Asah 🌟",
         image: "assets/img/Memory-2.jpg",
         description:
-          "Dari tugas, deadline, drama, sampai akhirnya bisa bilang: S.Kom officially unlocked! 🎓✨"
+          "Perjuangan yang membuahkan hasil luar biasa! Kerja keras kamu terbayar tuntas pas berhasil jadi salah satu Lulusan Terbaik di Program Asah. Super proud of you!"
       },
       {
         year: "2025",
-        title: "New Chapter ✨",
+        title: "Growing Beautifully 🌸✨",
         image: "assets/img/Memory-3.jpg",
         description:
-          "Chapter baru dimulai. Banyak hal baru, banyak cerita baru, dan tentunya lebih banyak alasan buat tersenyum."
+          "Menikmati proses tumbuh jadi sosok yang makin matang, bijak, dan dewasa. Tetap jadi diri sendiri yang selalu bawa keceriaan dan energi positif buat orang-orang di sekitarmu."
       },
       {
         year: "2026",
-        title: "Level 22 👑",
+        title: "Sidang S.Kom Unlocked! 🎓✨",
         image: "assets/img/Memory-4.jpg",
         description:
-          "Dan akhirnya kita sampai di sini. Level 22 unlocked! Semoga chapter ini jadi salah satu chapter terbaik dalam hidupmu."
+          "Momen epic & lega banget! Tepat H-1 sebelum ulang tahun kamu, kamu resmi lulus sidang dan meraih gelar S.Kom. Kado ulang tahun paling indah hasil perjuangan kamu sendiri!"
+      },
+      {
+        year: "2026",
+        title: "Level 22: Double Celebration! 👑🎈",
+        image: "assets/img/Memory-5.jpg",
+        description:
+          "Dan akhirnya hari ini kita rayain double kebahagiaan! Selamat ulang tahun ke-22, Alia Jennifer Kim Ritzky, S.Kom. Semoga chapter baru ini membawa lebih banyak kesuksesan & kebahagiaan!"
       }
     ];
 
@@ -36,7 +42,6 @@ class MemoryStage extends HTMLElement {
 
     this.innerHTML = `
       <!-- ==================== MEMORY STAGE ==================== -->
-      <!-- TAMBAHKAN KELAS 'hidden' DI SINI AGAR TIDAK MUNCUL DI AWAL -->
       <section
         id="memory-section"
         class="hidden mt-12 sm:mt-16 pt-8 border-t-2 border-dashed border-pink-200 text-center space-y-6"
@@ -46,45 +51,41 @@ class MemoryStage extends HTMLElement {
         <div
           class="inline-block bg-purple-100 text-purple-500 font-cute text-xs sm:text-sm px-4 py-1.5 rounded-full font-bold border border-purple-200 shadow-sm"
         >
-          QUEST 1: MEMORY LANE 📸
+          STAGE 1: MEMORY LANE 📸
         </div>
 
         <!-- Title -->
         <div class="space-y-2">
-          <h2
-            class="font-cute text-2xl sm:text-3xl text-purple-600 font-bold"
-          >
+          <h2 class="font-cute text-2xl sm:text-3xl text-purple-600 font-bold">
             Let's Take a Trip Down Memory Lane! ✨
           </h2>
-
-          <p
-            class="text-xs sm:text-base text-slate-500 max-w-xs sm:max-w-md mx-auto leading-relaxed"
-          >
-            Sebelum lanjut ke quest berikutnya, yuk lihat kembali
-            beberapa cerita dan kenangan yang pernah dilewati. 🌸
+          <p class="text-xs sm:text-base text-slate-500 max-w-xs sm:max-w-md mx-auto leading-relaxed">
+            Sebelum lanjut ke quest berikutnya, yuk lihat kembali beberapa cerita dan kenangan yang pernah dilewati. 🌸
           </p>
         </div>
 
-        <!-- Memory Card -->
+        <!-- Memory Card Container -->
         <div class="max-w-xs sm:max-w-md mx-auto">
-          <div
-            class="bg-white border-4 border-purple-200 p-4 sm:p-5 rounded-3xl shadow-xl"
-          >
-            <!-- Photo -->
-            <div
-              class="relative bg-purple-50 rounded-2xl p-2 border-2 border-purple-100"
-            >
+          <!-- Polaroid Frame Wrapper -->
+          <div class="bg-white border-4 border-purple-200 p-4 sm:p-5 rounded-3xl shadow-xl transition-all duration-300 transform hover:-rotate-1">
+            
+            <!-- Photo Box (Polaroid Look) -->
+            <div class="relative bg-purple-50 rounded-2xl p-2.5 border-2 border-purple-100 shadow-inner group overflow-hidden">
+              
+              <!-- Cute Tape Deco -->
+              <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-4 bg-pink-200/80 backdrop-blur-sm rotate-2 z-20 rounded-sm border border-pink-300"></div>
+
               <img
                 id="memory-image"
                 src=""
                 alt="Memory"
-                class="w-full h-64 sm:h-80 object-cover rounded-xl transition-all duration-500"
+                class="w-full h-64 sm:h-80 object-cover rounded-xl transition-all duration-500 transform scale-100 group-hover:scale-105"
               />
 
               <!-- Year Badge -->
               <span
                 id="memory-year"
-                class="absolute top-4 left-4 bg-yellow-300 text-yellow-900 border-2 border-yellow-400 font-cute text-xs font-bold px-3 py-1 rounded-full shadow-md"
+                class="absolute top-4 left-4 bg-yellow-300 text-yellow-900 border-2 border-yellow-400 font-cute text-xs font-bold px-3 py-1 rounded-full shadow-md z-10 transition-transform duration-300"
               >
                 2023
               </span>
@@ -94,37 +95,37 @@ class MemoryStage extends HTMLElement {
             <div class="mt-5 space-y-2">
               <h3
                 id="memory-title"
-                class="font-cute text-xl sm:text-2xl text-purple-600 font-bold"
+                class="font-cute text-xl sm:text-2xl text-purple-600 font-bold transition-all duration-300"
               >
                 Memory Title
               </h3>
 
               <p
                 id="memory-description"
-                class="text-xs sm:text-sm text-slate-500 leading-relaxed"
+                class="text-xs sm:text-sm text-slate-500 leading-relaxed transition-all duration-300"
               >
                 Memory description
               </p>
             </div>
           </div>
 
-          <!-- Progress -->
+          <!-- Progress Text -->
           <div class="flex justify-center items-center gap-2 mt-5">
             <span
               id="memory-progress"
               class="font-cute text-xs text-purple-400 font-bold"
             >
-              MEMORY 1 / 4
+              MEMORY 1 / 5
             </span>
           </div>
 
-          <!-- Dots -->
+          <!-- Dots Indicator -->
           <div
             id="memory-dots"
             class="flex justify-center gap-2 mt-3"
           ></div>
 
-          <!-- Navigation -->
+          <!-- Navigation Button -->
           <div class="mt-5">
             <button
               id="next-memory-btn"
@@ -139,21 +140,18 @@ class MemoryStage extends HTMLElement {
         <!-- Completion Message -->
         <div
           id="memory-complete"
-          class="hidden max-w-xs sm:max-w-md mx-auto bg-emerald-50 border-2 border-emerald-200 p-5 rounded-3xl shadow-sm space-y-3"
+          class="hidden max-w-xs sm:max-w-md mx-auto bg-emerald-50 border-2 border-emerald-200 p-5 rounded-3xl shadow-sm space-y-3 animate-pop-in"
         >
-          <div class="text-4xl">
+          <div class="text-4xl animate-bounce">
             🎉
           </div>
 
-          <h3
-            class="font-cute text-lg sm:text-xl text-emerald-600 font-bold"
-          >
-            ALL MEMORIES UNLOCKED!
+          <h3 class="font-cute text-lg sm:text-xl text-emerald-600 font-bold">
+            ALL MEMORIES UNLOCKED! 🏆
           </h3>
 
           <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-            Oke, cukup nostalgia-nya. Sekarang waktunya lanjut ke
-            quest berikutnya! 🕯️✨
+            Semua kenangan manis berhasil dibuka! Sekarang waktunya tes seberapa konsisten kebiasaan kamu di quest berikutnya! 🧠✨
           </p>
 
           <button
@@ -196,29 +194,27 @@ class MemoryStage extends HTMLElement {
 
     if (image) {
       image.style.opacity = "0";
+      image.style.transform = "scale(0.95)";
 
       setTimeout(() => {
         image.src = memory.image;
         image.alt = memory.title;
         image.style.opacity = "1";
+        image.style.transform = "scale(1)";
       }, 150);
     }
 
     if (year) {
       year.innerText = memory.year;
+      year.classList.add("scale-125");
+      setTimeout(() => year.classList.remove("scale-125"), 200);
     }
 
-    if (title) {
-      title.innerText = memory.title;
-    }
-
-    if (description) {
-      description.innerText = memory.description;
-    }
+    if (title) title.innerText = memory.title;
+    if (description) description.innerText = memory.description;
 
     if (progress) {
-      progress.innerText =
-        `MEMORY ${this.currentIndex + 1} / ${this.memories.length}`;
+      progress.innerText = `MEMORY ${this.currentIndex + 1} / ${this.memories.length}`;
     }
 
     if (dots) {
@@ -226,7 +222,7 @@ class MemoryStage extends HTMLElement {
         .map((_, index) => `
           <span
             class="w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === this.currentIndex
-            ? "bg-purple-500 scale-125"
+            ? "bg-purple-500 scale-125 shadow-sm"
             : "bg-purple-200"
           }"
           ></span>
@@ -235,7 +231,6 @@ class MemoryStage extends HTMLElement {
     }
 
     const nextBtn = this.querySelector("#next-memory-btn");
-
     if (nextBtn) {
       if (this.currentIndex === this.memories.length - 1) {
         nextBtn.innerText = "FINISH MEMORIES ✨";
@@ -249,6 +244,15 @@ class MemoryStage extends HTMLElement {
     if (this.currentIndex < this.memories.length - 1) {
       this.currentIndex++;
       this.renderMemory();
+
+      // Confetti kecil tiap ganti slide
+      if (typeof confetti === "function") {
+        confetti({
+          particleCount: 20,
+          spread: 40,
+          origin: { y: 0.6 }
+        });
+      }
 
       const section = this.querySelector("#memory-section");
       if (section) {
@@ -283,29 +287,19 @@ class MemoryStage extends HTMLElement {
 
     if (typeof confetti === "function") {
       confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: {
-          y: 0.6
-        }
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.6 }
       });
     }
   }
 
   continueQuest() {
     const quizComponent = document.querySelector("quiz-stage");
-
-    if (!quizComponent) {
-      console.warn("Quiz Stage tidak ditemukan.");
-      return;
-    }
+    if (!quizComponent) return;
 
     const quizSection = quizComponent.querySelector("#quiz-section");
-
-    if (!quizSection) {
-      console.warn("#quiz-section tidak ditemukan.");
-      return;
-    }
+    if (!quizSection) return;
 
     quizSection.classList.remove("hidden");
 

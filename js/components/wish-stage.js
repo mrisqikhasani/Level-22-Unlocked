@@ -6,7 +6,7 @@ class WishStage extends HTMLElement {
         class="hidden mt-12 sm:mt-16 pt-8 border-t-2 border-dashed border-pink-200 text-center space-y-6">
 
         <div class="inline-block bg-pink-100 text-pink-500 font-cute text-xs sm:text-sm px-4 py-1.5 rounded-full font-bold border border-pink-200 shadow-sm">
-          STAGE 2: WISH CAPSULE 💌
+          STAGE 4: WISH CAPSULE 💌
         </div>
 
         <h2 class="font-cute text-2xl sm:text-3xl text-pink-600 font-bold">Tulis Harapan Kamu di Sini! ✨</h2>
@@ -83,8 +83,8 @@ class WishStage extends HTMLElement {
     submitBtn.innerText = "SAVING TO CAPSULE... ⏳";
     submitBtn.disabled = true;
 
-    // const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzABbP1njTIpCTv_1FXoAy3o8B12nnLpRhwwahf392csfKbqbgHpIw9mxImg8bIomST/exec";
-    const SCRIPT_URL = "";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzABbP1njTIpCTv_1FXoAy3o8B12nnLpRhwwahf392csfKbqbgHpIw9mxImg8bIomST/exec";
+    // const SCRIPT_URL = "";
 
     try {
       await fetch(SCRIPT_URL, {

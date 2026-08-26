@@ -6,7 +6,7 @@ class CakeStage extends HTMLElement {
         class="hidden mt-12 sm:mt-16 pt-8 border-t-2 border-dashed border-pink-200 text-center space-y-6">
 
         <div class="inline-block bg-pink-100 text-pink-500 font-cute text-xs sm:text-sm px-4 py-1.5 rounded-full font-bold border border-pink-200 shadow-sm">
-          STAGE 1: MAKE A WISH 🕯️
+          STAGE 3: CANDLE STAGE 🕯️
         </div>
 
         <h2 class="font-cute text-2xl sm:text-3xl text-pink-600 font-bold">Tiup Lilinnya & Make a Wish! ✨</h2>

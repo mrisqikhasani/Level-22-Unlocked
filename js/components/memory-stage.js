@@ -9,7 +9,7 @@ class MemoryStage extends HTMLElement {
           "Awal dari segalanya! Momen ketika kamu nanya-nanya soal program Bangkit. Dari yang awalnya masih belajar awal di IT, ternyata jadi langkah pertama dari perjalanan hebat kamu."
       },
       {
-        year: "2024",
+        year: "2025",
         title: "Lulusan Terbaik Program Asah 🌟",
         image: "assets/img/Memory-2.jpg",
         description:
@@ -25,7 +25,7 @@ class MemoryStage extends HTMLElement {
       {
         year: "2026",
         title: "Sidang S.Kom Unlocked! 🎓✨",
-        image: "assets/img/Memory-4.jpg",
+        image: "assets/img/Memory-4.jpeg",
         description:
           "Momen epic & lega banget! Tepat H-1 sebelum ulang tahun kamu, kamu resmi lulus sidang dan meraih gelar S.Kom. Kado ulang tahun paling indah hasil perjuangan kamu sendiri!"
       },

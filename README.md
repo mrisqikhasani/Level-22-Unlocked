@@ -8,8 +8,7 @@
 </p>
 
 > 🎮 **Project Description:**  
-> An interactive, RPG-style gamified web application specially crafted to celebrate **Alia Jennifer Kim Ritzky, S.Kom** on her 22nd Birthday and graduation milestone. Built with modular Native Web Components, Tailwind CSS, and custom micro-interactions.
-
+> An interactive, RPG-style gamified web application specially crafted to celebrate a special birthday milestone. Built with modular Native Web Components, Tailwind CSS, custom keyframe animations, and micro-interactions.
 ---
 
 ## 🌟 Key Features & Quest Flow
@@ -20,13 +19,12 @@ The web app features a sequential, state-driven quest architecture that guides t
 🔐 Passcode Gate ➔ 📸 Stage 1: Memory Lane ➔ 🧠 Stage 2: Personality Check ➔ 🕯️ Stage 3: Candle Stage ➔ 💌 Stage 4: Wish Capsule ➔ 🌹 Final Stage: Secret Letter
 
 
-* **🔐 Security Checkpoint:** Passcode-protected entry gate verifying player identity (`DDMMYY`).
-* **📸 Stage 1 — Memory Lane:** Interactive 5-step Polaroid timeline highlighting her journey from Bangkit 2023, Asah Best Graduate 2024, to her S.Kom defense in 2026.
-* **🧠 Stage 2 — Alia's Personality Check:** Self-test trivia quiz with dynamic score feedback, custom celebratory messages, and interactive option locks.
-* **🕯️ Stage 3 — Candle Stage:** Interactive cake presentation with candle-blowing interaction and confetti effects.
-* **💌 Stage 4 — Wish Capsule:** Form integration for recording player wishes for Level 22.
-* **🌹 Final Stage — Secret Letter:** Personal graduation & birthday letter with custom celebration triggers.
-
+* 🔐 Security Checkpoint: Passcode-protected entry gate verifying player identity (DDMMYY).
+* 📸 Stage 1 — Memory Lane: Interactive 5-step Polaroid timeline highlighting sweet memories, growth, and shared milestones over the years.
+* 🧠 Stage 2 — Personality Check: Self-test trivia quiz with dynamic score feedback, custom celebratory messages, and interactive option locks.
+* 🕯️ Stage 3 — Candle Stage: Interactive cake presentation with candle-blowing interaction and confetti effects.
+* 💌 Stage 4 — Wish Capsule: Form integration for recording birthday wishes and hopes for Level 22.
+* 🌹 Final Stage — Secret Letter: Personal birthday letter with interactive celebration triggers.
 ---
 
 ## 🛠️ Tech Stack & Architecture

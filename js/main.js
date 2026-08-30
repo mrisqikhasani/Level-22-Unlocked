@@ -24,7 +24,7 @@ function handlePasscodeSubmit(event) {
       } else if (attemptCount === 2) {
         clueToast.innerText = "😜 Masih salah! Clue: Formatnya DDMMYY ya manis";
       } else {
-        clueToast.innerText = "🚨 Udah 3x salah nih! Clue utama: Tanggal lahir kamu sendiri ya sayang ❤️ (270804)";
+        clueToast.innerText = "🚨 Udah 3x salah nih! Clue utama: Tanggal lahir kamu sendiri ya ❤️ (270804)";
       }
     }
   }

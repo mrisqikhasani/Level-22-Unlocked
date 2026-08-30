@@ -66,7 +66,7 @@ class QuizStage extends HTMLElement {
                     "SEMUA DOA BAIK DI ATAS! 🎉"
                 ],
                 answer: 3,
-                correctMessage: "Aamiin! Semoga rezeki makin melimpah, karier DevOps AWS makin meroket, dan semua doa baik kamu dikabulkan satu per satu ya sayang! ❤️☁️✨",
+                correctMessage: "Aamiin! Semoga rezeki makin melimpah, karier DevOps AWS makin meroket, dan semua doa baik kamu dikabulkan satu per satu ya ❤️☁️✨",
                 wrongMessage: "Jangan pilih satu-satu, aminkan SEMUA doa baiknya dong! 😭❤️"
             }
         ];

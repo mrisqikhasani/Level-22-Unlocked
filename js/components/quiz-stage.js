@@ -2,11 +2,11 @@ class QuizStage extends HTMLElement {
     connectedCallback() {
 
         // ==============================
-        // QUIZ DATA: ALIA'S SELF-TEST
+        // QUIZ DATA: PERSONALITY & FUN TEST
         // ==============================
         this.questions = [
             {
-                question: "Menurut versi kamu sendiri, apa super-power rahasia yang paling bikin orang di sekitarmu (termasuk aku) merasa nyaman? 🌸",
+                question: "Menurut versi kamu sendiri, apa super-power rahasia yang paling bikin orang di sekitarmu (termasuk aku) selalu merasa nyaman? 🌸",
                 options: [
                     "Suka ngasih tebakan garing 😜",
                     "Energi positif, kehangatan, & senyuman kamu ✨",
@@ -45,28 +45,28 @@ class QuizStage extends HTMLElement {
             },
 
             {
-                question: "Dari perjalanan kamu di Bangkit, lulusan terbaik Asah, resmi S.Kom, sampai makin pro di dunia DevOps & AWS Cloud, predikat apa yang paling cocok buat kamu? 🌟",
+                question: "Dari semua sifat manis dan hal-hal unik yang kamu punya, predikat apa yang paling cocok buat menggambarkan kamu? 🌟",
                 options: [
-                    "Cewek Pekerja Keras & Pantang Menyerah 💪",
-                    "Future Certified AWS Cloud Engineer ☁️💻",
-                    "Sosok Hebat yang Bikin Bangga ❤️",
+                    "Cewek Penyabar & Paling Pengertian 🥰",
+                    "Si Paling Gemes & Mood Booster Utama 🌸",
+                    "Sosok Spesial yang Selalu Bikin Bangga ❤️",
                     "SEMUA BENAR TANPA KECUALI! 👑✨"
                 ],
                 answer: 3,
-                correctMessage: "100% CORRECT! Kamu borong semua predikat keren itu tanpa sisa! 👑☁️❤️",
+                correctMessage: "100% CORRECT! Kamu borong semua predikat manis itu tanpa sisa! 👑❤️✨",
                 wrongMessage: "Kamu itu borongan semuanya! Pilih yang 'SEMUA BENAR' dong! 🥺✨"
             },
 
             {
-                question: "Apa wishlist wajib yang paling kamu harapkan di usiamu yang ke-22 ini? ✨",
+                question: "Apa wishlist wajib yang paling kamu harapkan di usiamu yang baru ini? ✨",
                 options: [
                     "Makin banyak kebahagiaan & senyuman ❤️",
-                    "Karier DevOps & AWS Cloud makin sukses ☁️🚀",
-                    "Rezeki melimpah, stok dimsum enak & barang gemoy aman 🥟🛍️💸",
+                    "Impian & cita-cita kamu tercapai satu per satu 🚀",
+                    "Rezeki melimpah, stok jajan enak & barang gemoy aman 🍰🛍️💸",
                     "SEMUA DOA BAIK DI ATAS! 🎉"
                 ],
                 answer: 3,
-                correctMessage: "Aamiin! Semoga rezeki makin melimpah, karier DevOps AWS makin meroket, dan semua doa baik kamu dikabulkan satu per satu ya ❤️☁️✨",
+                correctMessage: "Aamiin! Semoga rezeki melimpah, semua impian tercapai, dan doa baik kamu dikabulkan satu per satu ya ❤️✨",
                 wrongMessage: "Jangan pilih satu-satu, aminkan SEMUA doa baiknya dong! 😭❤️"
             }
         ];
@@ -90,10 +90,10 @@ class QuizStage extends HTMLElement {
         <!-- Heading -->
         <div class="space-y-2">
           <h2 class="font-cute text-2xl sm:text-3xl text-purple-600 font-bold">
-            Alia's Self-Test! 👀
+            Birthday Self-Test! 👀
           </h2>
           <p class="text-xs sm:text-base text-slate-500 max-w-xs sm:max-w-md mx-auto leading-relaxed">
-            Sebelum lanjut ke tiup lilin, yuk tes seberapa konsisten kebiasaan & fakta unik kamu di Level 22 ini! ✨
+            Sebelum lanjut ke tiup lilin, yuk tes seberapa konsisten kebiasaan & fakta unik kamu di level baru ini! ✨
           </p>
         </div>
 
@@ -296,16 +296,16 @@ class QuizStage extends HTMLElement {
         if (resultScore) resultScore.innerText = `${this.score} / ${this.questions.length}`;
 
         if (resultTitle) {
-            if (this.score === this.questions.length) resultTitle.innerText = "100% PERFECT ALIA! 👑";
+            if (this.score === this.questions.length) resultTitle.innerText = "100% PERFECT GIRL! 👑";
             else if (this.score >= 4) resultTitle.innerText = "ALMOST PERFECT! ✨";
             else resultTitle.innerText = "NICE TRY CUTIE! 🥰";
         }
 
         if (resultMessage) {
             if (this.score === this.questions.length) {
-                resultMessage.innerText = "Luar biasa! Kamu terbukti 100% konsisten jadi cewek paling gemoy, berprestasi, dan mengagumkan di Level 22 ini! Certified Cutest Girl Unlocked! 🏆❤️";
+                resultMessage.innerText = "Luar biasa! Kamu terbukti 100% konsisten jadi cewek paling gemoy, manis, dan mengagumkan di level baru ini! Certified Cutest Girl Unlocked! 🏆❤️";
             } else {
-                resultMessage.innerText = "Skor kamu keren banget! Apapun jawabannya, kamu tetap jadi cewek paling berprestasi & terfavorit hari ini! 👑✨";
+                resultMessage.innerText = "Skor kamu keren banget! Apapun jawabannya, kamu tetap jadi cewek paling gemes & terfavorit hari ini! 👑✨";
             }
         }
 

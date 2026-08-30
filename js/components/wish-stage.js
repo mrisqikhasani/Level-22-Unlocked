@@ -83,8 +83,8 @@ class WishStage extends HTMLElement {
     submitBtn.innerText = "SAVING TO CAPSULE... ⏳";
     submitBtn.disabled = true;
 
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzABbP1njTIpCTv_1FXoAy3o8B12nnLpRhwwahf392csfKbqbgHpIw9mxImg8bIomST/exec";
-    // const SCRIPT_URL = "";
+    // const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzABbP1njTIpCTv_1FXoAy3o8B12nnLpRhwwahf392csfKbqbgHpIw9mxImg8bIomST/exec";
+    const SCRIPT_URL = "";
 
     try {
       await fetch(SCRIPT_URL, {

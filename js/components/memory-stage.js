@@ -3,38 +3,38 @@ class MemoryStage extends HTMLElement {
     this.memories = [
       {
         year: "2023",
-        title: "The Beginning & Bangkit Era 🌸",
-        image: "assets/img/Memory-1.jpg",
+        title: "The Beginning 🌸",
+        image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
         description:
-          "Awal dari segalanya! Momen ketika kamu nanya-nanya soal program Bangkit. Dari yang awalnya masih belajar awal di IT, ternyata jadi langkah pertama dari perjalanan hebat kamu."
+          "Awal dari segalanya! Momen manis di mana cerita kita baru dimulai. Dari berkenalan sampai akhirnya selalu ada buat satu sama lain."
+      },
+      {
+        year: "2024",
+        title: "First Sweet Adventure ✈️✨",
+        image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
+        description:
+          "Petualangan dan jalan-jalan seru pertama kita! Banyak momen lucu, tawa, dan foto-foto gemes yang bikin hari-hari terasa lebih berwarna."
       },
       {
         year: "2025",
-        title: "Lulusan Terbaik Program Asah 🌟",
-        image: "assets/img/Memory-2.jpg",
+        title: "Growing Beautifully 🌟💗",
+        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
         description:
-          "Perjuangan yang membuahkan hasil luar biasa! Kerja keras kamu terbayar tuntas pas berhasil jadi salah satu Lulusan Terbaik di Program Asah. Super proud of you!"
+          "Menikmati proses tumbuh jadi sosok yang makin matang, bijak, dan cantik. Tetap jadi diri sendiri yang selalu bawa keceriaan dan energi positif."
       },
       {
         year: "2025",
-        title: "Growing Beautifully 🌸✨",
-        image: "assets/img/Memory-3.jpg",
+        title: "Proud of Your Achievements 🎓✨",
+        image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
         description:
-          "Menikmati proses tumbuh jadi sosok yang makin matang, bijak, dan dewasa. Tetap jadi diri sendiri yang selalu bawa keceriaan dan energi positif buat orang-orang di sekitarmu."
+          "Momen penuh rasa bangga! Semua kerja keras dan perjuangan kamu akhirnya membuahkan hasil manis. Super proud of you, princess!"
       },
       {
         year: "2026",
-        title: "Sidang S.Kom Unlocked! 🎓✨",
-        image: "assets/img/Memory-4.jpeg",
+        title: "Level Up & Happy Birthday! 👑🎈",
+        image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=80",
         description:
-          "Momen epic & lega banget! Tepat H-1 sebelum ulang tahun kamu, kamu resmi lulus sidang dan meraih gelar S.Kom. Kado ulang tahun paling indah hasil perjuangan kamu sendiri!"
-      },
-      {
-        year: "2026",
-        title: "Level 22: Double Celebration! 👑🎈",
-        image: "assets/img/Memory-5.jpg",
-        description:
-          "Dan akhirnya hari ini kita rayain double kebahagiaan! Selamat ulang tahun ke-22, Alia Jennifer Kim Ritzky, S.Kom. Semoga chapter baru ini membawa lebih banyak kesuksesan & kebahagiaan!"
+          "Selamat ulang tahun buat cewek paling spesial! Semoga di chapter baru ini makin banyak kebahagiaan, impian yang tercapai, dan kenangan indah bareng."
       }
     ];
 
@@ -60,7 +60,7 @@ class MemoryStage extends HTMLElement {
             Let's Take a Trip Down Memory Lane! ✨
           </h2>
           <p class="text-xs sm:text-base text-slate-500 max-w-xs sm:max-w-md mx-auto leading-relaxed">
-            Sebelum lanjut ke quest berikutnya, yuk lihat kembali beberapa cerita dan kenangan yang pernah dilewati. 🌸
+            Sebelum lanjut ke quest berikutnya, yuk lihat kembali beberapa cerita dan kenangan indah yang pernah kita lewati bersama. 🌸
           </p>
         </div>
 
@@ -151,7 +151,7 @@ class MemoryStage extends HTMLElement {
           </h3>
 
           <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-            Semua kenangan manis berhasil dibuka! Sekarang waktunya tes seberapa konsisten kebiasaan kamu di quest berikutnya! 🧠✨
+            Semua kenangan manis berhasil dibuka! Sekarang waktunya tes seberapa tahu kamu tentang hal-hal favorit di quest berikutnya! 🧠✨
           </p>
 
           <button
@@ -245,7 +245,6 @@ class MemoryStage extends HTMLElement {
       this.currentIndex++;
       this.renderMemory();
 
-      // Confetti kecil tiap ganti slide
       if (typeof confetti === "function") {
         confetti({
           particleCount: 20,

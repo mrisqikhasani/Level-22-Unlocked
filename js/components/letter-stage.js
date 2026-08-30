@@ -21,26 +21,26 @@ class LetterStage extends HTMLElement {
 
           <!-- Header Letter Info -->
           <div class="flex items-center justify-between border-b-2 border-pink-100 pb-3">
-            <span class="font-cute text-pink-500 font-bold text-xs sm:text-sm">For: Alia Jennifer Kim Ritzky, S.Kom ✨</span>
-            <span class="text-xs text-slate-400 font-semibold bg-pink-100 text-pink-600 px-2 py-0.5 rounded-full border border-pink-200">Level 22 🎓</span>
+            <span class="font-cute text-pink-500 font-bold text-xs sm:text-sm">For: My Favorite Person ✨</span>
+            <span class="text-xs text-slate-400 font-semibold bg-pink-100 text-pink-600 px-2 py-0.5 rounded-full border border-pink-200">Level 22 🎈</span>
           </div>
 
           <!-- PESAN UTAMA -->
           <div class="space-y-3.5 text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
             <p class="font-bold text-pink-500 text-sm sm:text-base">
-              Happy Birthday, Alia, S.Kom! 🎉🎓✨
+              Happy Birthday, Princess! 🎉✨
             </p>
             <p>
-              Selamat memasuki usia yang baru. Terima kasih ya sudah hadir dan tumbuh jadi sosok yang selalu membawa warna, kehangatan, dan keceriaan di sekitarmu.
+              Selamat memasuki usia yang baru! Terima kasih ya sudah hadir dan tumbuh jadi sosok yang selalu membawa warna, kehangatan, dan keceriaan di sekitarku.
             </p>
             <p>
-              Mengingat awal pertama kita ketemu gara-gara kamu nanya soal program Bangkit—dari yang dulu masih belajar awal di IT, berhasil jadi <b>Lulusan Terbaik di Program Asah</b>, sampai kemarin momen lega banget H-1 ultah resmi unlocked gelar <b>S.Kom</b>... Jujur, progress dan pencapaian kamu luar biasa banget. Aku beneran bangga sama kamu! 🌟🎓
+              Melihat perjalanan yang sudah kita lewati sejauh ini—dari setiap momen sederhana, tawa bersama, sampai kerja keras kamu dalam meraih tiap impian... Jujur, aku bener-bener bangga sama kamu! Kamu selalu berhasil membuktikan kalau kamu itu sosok yang hebat. 🌟💖
             </p>
             <p>
-              Kamu itu sosok yang gigih, kuat, otentik, baik hati, dan punya energi positif yang selalu berhasil bikin orang-orang di sekitarmu merasa nyaman. Melihat perjuangan kamu sampai di titik ini bikin aku makin yakin, di masa depan nanti kamu pasti bisa meraih semua mimpi besar kamu—termasuk jadi <b>DevOps & AWS Cloud Engineer</b> yang hebat! Jangan pernah ragu sama kemampuan diri kamu sendiri ya!
+              Kamu itu sosok yang gigih, kuat, otentik, baik hati, dan punya energi positif yang selalu bikin orang-orang di sekitarmu merasa nyaman. Melihat kebaikan dan semangat kamu bikin aku makin yakin, di masa depan nanti kamu pasti bisa meraih semua mimpi besar kamu. Jangan pernah ragu sama kemampuan diri kamu sendiri ya!
             </p>
             <p>
-              Semoga di level 22 ini, rezeki makin melimpah, karier dipermudah, makin banyak kebahagiaan yang datang, sehat selalu, dan tentunya... bisa makan Chikuro & Dimsum enak sepuasnya tanpa ragu! 🥟🛍️✨
+              Semoga di level baru ini, rezeki makin melimpah, segala urusan dipermudah, makin banyak kebahagiaan yang datang, sehat selalu, dan tentunya... bisa jajan makanan favorit kamu sepuasnya tanpa ragu! 🍰🛍️✨
             </p>
             <p>
               Tetap jadi diri kamu yang otentik, lucu, dan selalu jadi orang baik ya.
@@ -49,8 +49,8 @@ class LetterStage extends HTMLElement {
 
           <!-- Signature Section -->
           <div class="border-t-2 border-pink-100 pt-4 text-right">
-            <span class="font-cute text-pink-500 font-bold text-xs sm:text-sm block">The Most Special Person,</span>
-            <span class="font-cute text-slate-500 text-xs font-semibold">Sani</span>
+            <span class="font-cute text-pink-500 font-bold text-xs sm:text-sm block">With all my love,</span>
+            <span class="font-cute text-slate-500 text-xs font-semibold">Your Favorite Person ❤️</span>
           </div>
 
         </div>
